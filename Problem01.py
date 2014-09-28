@@ -1,14 +1,12 @@
-# Problem 1
-# If we list all the natural numbers below 10 that are multiples of 3 or 5, we get
-# 3, 5, 6 and 9. The sum of these multiples is 23.
+# Update using PDF from Euler Website 28 September
+# This works with larger numbers as well!
+# Note that 3 + 6 + 9 + ... is equal to
+# 3 * (1 + 2 + 3 + ...) etc.
 
-# Find the sum of all the multiples of 3 or 5 below 1000.
+target = 999999999
 
-def sum_3_5(num):
-    counter = 0
-    for x in xrange(num):
-       if x % 3 == 0 or x % 5 == 0:
-            counter += x
-    print counter
+def sum_divided_by(n):
+	reduced_number = target / n
+	return n * (reduced_number * (reduced_number + 1)) / 2
 
-sum_3_5(1000)
+print sum_divided_by(3) + sum_divided_by(5) - sum_divided_by(15)
