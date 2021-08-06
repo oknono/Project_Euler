@@ -4,7 +4,7 @@
 
 # 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 
-# By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum 
+# By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum
 # of the even-valued terms./Users/nono/Documents/Study/Euler/Problem2.py
 
 # create list of fibonacci numbers
@@ -19,12 +19,14 @@ def fibo(num):
             list.append(y)
     return list
 
+
 def sum_even(num):
     list = fibo(num)
     counter = 0
     for item in list:
-        if item%2 == 0:
+        if item % 2 == 0:
             counter += item
-    print counter
+    print(counter)
+
 
 sum_even(4000000)
